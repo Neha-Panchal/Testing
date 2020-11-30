@@ -1,0 +1,36 @@
+package com.neha.seleniumwebdriver.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class LaunchBrowser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		
+		// Initialize browser
+		WebDriver driver=new ChromeDriver();
+		 
+		// Open Google
+		driver.get("https://www1.oanda.com/currency/converter/");
+		 
+//		// Close browser
+//		driver.close();
+//			
+//		// Click on the search text box and send value  
+//	    driver.findElement(By.id("lst-ib")).sendKeys("https://www1.oanda.com/currency/converter/");  
+//	          
+//	    // Click on the search button  
+//	    driver.findElement(By.name("btnK")).click();  
+		
+		Select dropdown = new Select(driver.findElement(By.id("quote_currency_input")));  
+		dropdown.selectByVisibleText("Database Testing");  
+	      
+	}
+
+}

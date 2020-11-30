@@ -1,0 +1,18 @@
+package com.neha.seleniumwebdriver.test;
+
+import org.openqa.selenium.By;  
+import org.openqa.selenium.WebDriver;  
+import org.openqa.selenium.chrome.ChromeDriver;  
+
+public class RadioButtonTest {
+
+	    public static void main(String[] args) {  
+	          
+	        System.setProperty("webdriver.chrome.driver", "C:\\work\\chromedriver.exe");  
+	        WebDriver driver = new ChromeDriver();  
+	        driver.get("file:///C:/Users/admin/Desktop/radio.html");  
+	        driver.findElement(By.xpath("//input[@value='Banana']")).click();  
+	        }  
+	  
+	  
+}
